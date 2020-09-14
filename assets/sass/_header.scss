@@ -1,0 +1,57 @@
+.header {
+  grid-area: header;
+
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-dark),
+    var(--color-primary-light)
+  );
+
+  padding: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+
+  @media only screen and (max-width: 47.5em) {
+    grid-template-columns: auto;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item + &__item {
+    margin-left: 3rem;
+  }
+
+  &__link {
+    display: block;
+    padding: 2rem;
+
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: opacity 150ms;
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    @media only screen and (max-width: 47.5em) {
+      padding-left: 0;
+    }
+  }
+}
+
+.logo {
+  max-width: 14rem;
+  img {
+    max-width: 14rem;
+  }
+
+  @media only screen and (max-width: 47.5em) {
+    margin-bottom: 2rem;
+  }
+}

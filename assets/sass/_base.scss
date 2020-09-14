@@ -1,0 +1,64 @@
+:root {
+  --color-primary-light: #b07dfb;
+  --color-primary-dark: #8844ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Volkorn', Georgia, serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+html {
+  font-size: 62.5%; // 10px -> 1rem
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// General grid
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1fr) 3fr 30rem;
+  grid-template-areas:
+    'header header header'
+    'sidenav content ads'
+    'footer footer footer';
+
+  @media only screen and (max-width: 75em) {
+    grid-template-columns: minmax(16rem, 1fr) 3fr;
+    grid-template-areas:
+      'header header'
+      'sidenav content'
+      'sidenav ads'
+      'footer footer';
+  }
+
+  @media only screen and (max-width: 47.5em) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'sidenav'
+      'content'
+      'ads'
+      'footer';
+  }
+}

@@ -1,0 +1,17 @@
+.footer {
+  grid-area: footer;
+
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-dark),
+    var(--color-primary-light)
+  );
+
+  p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    padding: 3rem;
+  }
+}
